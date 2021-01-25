@@ -35,7 +35,7 @@ public class Main {
             System.out.println(SendMail.send(new String[] { "弹幕发送成功通知", "时间：" + new Date().toLocaleString()
                     + "\n发送弹幕：" + Bili.msg}));
         }else {
-            System.out.println("今日首条弹幕发送，失败报告->" + Bili.result);
+            System.out.println("今日首条弹幕发送失败！失败报告->" + Bili.result);
             System.out.println(SendMail.send(new String[] { "弹幕发送失败通知", "时间：" + new Date().toLocaleString()
                     + "\n" + "失败：" + Bili.result }));
         }

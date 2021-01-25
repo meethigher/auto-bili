@@ -4,6 +4,18 @@
 
 后来发现哔哩哔哩还可以实现自动评论之类的，没有那个需求，就懒得整了，有兴趣小伙伴可以自己尝试。
 
+设置入口函数
+
+```xml
+<!--jar包的入口函数-->
+<mainClass>top.meethigher.danmu.Main2</mainClass>
+```
+
+1. Main：定时弹幕，适用于每日首条弹幕加经验升牌子
+2. Main2：循环弹幕，间隔1分钟发弹幕，混脸熟
+
+运行命令mvn clean package生成jar包，将jar包放到服务器运行即可。
+
 ## 注意事项
 
 1. 如果提示csrf不匹配，则发弹幕抓包send接口，查询里面的csrf
