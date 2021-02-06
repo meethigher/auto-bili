@@ -17,7 +17,7 @@ public class Bili {
     public static String result = null;
 
     public static String generateBody() {
-        return "color=16777215&fontsize=25&mode=1&msg=" + getRandomMsg() + "&rnd=1611575756&roomid=" + Data.roomId + "&bubble=0&csrf_token=de54b754871e3ce6ac654ceb1a18600d&csrf=de54b754871e3ce6ac654ceb1a18600d";
+        return "color=16777215&fontsize=25&mode=1&msg="+getRandomMsg()+"&rnd=1611575756&roomid="+Data.roomId+"&bubble=0&csrf_token=d2e904d5b51595b06e972df4ec669f19&csrf=d2e904d5b51595b06e972df4ec669f19";
     }
 
     public static String getRandomMsg() {
@@ -30,6 +30,7 @@ public class Bili {
 
     public static String submit() {
         result = HttpUtil.sendPost(Data.sendApi, generateBody(), Data.getHeaders());
+        System.out.println(result);
         if (result == null)
             return "fail";
         JSONObject json = JSONObject.fromObject(result);

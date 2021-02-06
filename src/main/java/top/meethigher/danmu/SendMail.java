@@ -34,7 +34,7 @@ public class SendMail {
 		properties.put("mail.smtp.port", "80");// 端口号
 
 		properties.put("mail.smtp.auth", "true");// 设置smtp是否需要认证
-		properties.put("mail.smtp.ssl.enable", "true");// 设置是否使用ssl安全连接 ---一般都使用
+		properties.put("mail.smtp.ssl.enable", "false");// 设置是否使用ssl安全连接 ---一般都使用
 		properties.put("mail.debug", "false");// 设置是否显示debug信息 true 会在控制台显示相关信息
 		try {
 			Session session = Session.getInstance(properties);

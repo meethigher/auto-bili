@@ -4,6 +4,9 @@ import org.junit.Test;
 import top.meethigher.danmu.Bili;
 import top.meethigher.danmu.Data;
 import top.meethigher.danmu.HttpUtil;
+import top.meethigher.danmu.SendMail;
+
+import java.util.Date;
 
 /**
  * Test
@@ -31,4 +34,9 @@ public class UnitTest {
      */
     @Test
     public void testGetMsg() { System.out.println(Bili.getRandomMsg()); }
+//    @Test
+//    public void testMail(){
+//        System.out.println(SendMail.send(new String[] { "弹幕发送成功通知", "时间：" + new Date().toLocaleString()
+//                + "\n发送弹幕：" + Bili.msg}));
+//    }
 }
