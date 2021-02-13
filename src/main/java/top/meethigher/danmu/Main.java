@@ -25,7 +25,7 @@ public class Main {
 		System.out.print("请输入开始发弹幕的分钟：");
 		m= scanner.nextInt();
 		scanner.close();
-		System.out.println("2021-01-26版本正在运行...");
+		System.out.println("2021-02-14版本正在运行...");
 	}
 
 	public static void submit() {

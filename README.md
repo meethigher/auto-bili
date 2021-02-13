@@ -8,7 +8,7 @@
 
 ```xml
 <!--jar包的入口函数-->
-<mainClass>top.meethigher.danmu.Main2</mainClass>
+<mainClass>top.meethigher.danmu.Main</mainClass>
 ```
 
 1. Main：定时弹幕，适用于每日首条弹幕加经验升牌子
@@ -20,7 +20,10 @@
 
 1. 如果提示csrf不匹配，则发弹幕抓包send接口，查询里面的csrf
 2. 配置文件中，注意要用unicode编码。多条弹幕用&分割
+3. 以上抓包都是基于网页版bili
 
 ## 更新记录
+
+* 2021-02-14：配置文件中添加csrf属性
 
 * 2021-01-26：首次提交，自动定时弹幕

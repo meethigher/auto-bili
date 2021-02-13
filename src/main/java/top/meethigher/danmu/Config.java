@@ -1,7 +1,6 @@
 package top.meethigher.danmu;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.Properties;
 
 /**
@@ -20,15 +19,26 @@ public class Config {
 	private static String tomail;
 	private static String fromail;
 	private static String fromailPw;
+
+	private static String csrf;
 	public static Properties pro;
 	static {
 		ClassLoader cl = Config.class.getClassLoader();
-		InputStream is = cl.getResourceAsStream("bilibili.properties");
+		InputStream is = null;
+		try {
+			//开发时配置文件位置
+//			is = cl.getResourceAsStream("bilibili.properties");
+			//jar包读取当前目录下文件
+			is=new FileInputStream(new File("bilibili.properties"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		try {
 			pro = new Properties()
 			;
 			pro.load(is);
 			cookie = pro.getProperty("cookie");
+			csrf=pro.getProperty("csrf");
 			roomId=pro.getProperty("roomId");
 			msg=pro.getProperty("msg");
 			tomail = pro.getProperty("tomail");
@@ -64,7 +74,8 @@ public class Config {
 		return fromailPw;
 	}
 
-	public static Properties getPro() {
-		return pro;
+	public static String getCsrf() {
+		return csrf;
 	}
+
 }
